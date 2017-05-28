@@ -1,0 +1,32 @@
+
+<app-modal #modal1>
+  <div class="app-modal-header">
+    header
+  </div>
+  <div class="app-modal-body">
+    Whatever content you like, form fields, anything
+    <input type="text" [(ngModel)]="heroe.nombre">
+    <!--<input [(ngModel)]="heroe.nombre" 
+          name="aliasNombre"
+          type="text"
+          class="form-control" 
+          placeholder="Nombre del héroe" 
+          required>
+          -->
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-default" (click)="modal1.hide()">Close</button>
+    <button type="button" class="btn btn-default" (click)="modal2.show()">Show modal 2</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div>
+</app-modal>
+
+<app-modal #modal2>
+  <div class="app-modal-header">
+    Esta seguro de actualizar el registro?
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-default" (click)="modal3.show()">OK</button>
+    <button type="button" class="btn btn-default" (click)="modal2.hide()">Cancelar</button>
+  </div>
+</app-modal>
